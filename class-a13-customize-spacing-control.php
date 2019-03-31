@@ -37,10 +37,10 @@ class A13_Customize_Spacing_Control extends WP_Customize_Control {
 		parent::__construct( $manager, $id, $args );
 
 		$this->side_labels = array(
-			'top' => esc_html__( 'Top', 'rife-free' ),
-			'right' => esc_html__( 'Right', 'rife-free' ),
-			'bottom' => esc_html__( 'Bottom', 'rife-free' ),
-			'left' => esc_html__('Left', 'rife-free' ),
+			'top' => esc_html__( 'Top', 'rife' ),
+			'right' => esc_html__( 'Right', 'rife' ),
+			'bottom' => esc_html__( 'Bottom', 'rife' ),
+			'left' => esc_html__('Left', 'rife' ),
 		);
 	}
 
@@ -93,7 +93,7 @@ class A13_Customize_Spacing_Control extends WP_Customize_Control {
 					<span title="{{ data.side_labels[side] }}" class="side-icon {{ data.side_icons[side] }}"></span><input type="number" name="{{ mode+'-'+side }}" value="{{ parseInt(value[mode+'-'+side], 10) }}" /></label>
 			<# } ); #>
 
-			<label class="screen-reader-text" for="{{ id_prefix }}{{ mode }}-unit"><?php esc_html_e( 'Unit', 'rife-free' ); ?></label>
+			<label class="screen-reader-text" for="{{ id_prefix }}{{ mode }}-unit"><?php esc_html_e( 'Unit', 'rife' ); ?></label>
 			<select id="{{ id_prefix }}{{ mode }}-unit" name="unit">
 				<# _.each( units, function( unit ) { #>
 				<option value="{{ unit }}"{{ selected_unit === unit ? selected_attr : '' }} >{{ unit }}</option>

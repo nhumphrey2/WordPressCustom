@@ -75,10 +75,10 @@ class A13_Customize_Font_Control extends WP_Customize_Control {
 		<span class="description customize-control-description">{{{ data.description }}}</span>
 		<# } #>
 		<div class="customize-control-content">
-			<label for="{{ id }}" class="outside"><?php esc_html_e( 'Font Family', 'rife-free' ); ?></label>
+			<label for="{{ id }}" class="outside"><?php esc_html_e( 'Font Family', 'rife' ); ?></label>
 			<select id="{{ id }}">
 				<# if ( typeof standard_fonts === 'object' ) { #>
-					<optgroup label="<?php echo esc_attr( __( 'Standard Fonts', 'rife-free' )); ?>">
+					<optgroup label="<?php echo esc_attr( __( 'Standard Fonts', 'rife' )); ?>">
 						<# _.each( standard_fonts, function( name, font ) { #>
 						<option value="{{ font }}"{{ selected_font === font ? selected_attr : '' }} >{{ name }}</option>
 						<# } ); #>
@@ -86,7 +86,7 @@ class A13_Customize_Font_Control extends WP_Customize_Control {
 				<# } #>
 
 				<# if ( typeof google_fonts === 'object' ) { #>
-					<optgroup label="<?php echo esc_attr( __( 'Google Webfonts', 'rife-free' )); ?>">'
+					<optgroup label="<?php echo esc_attr( __( 'Google Webfonts', 'rife' )); ?>">'
 						<# _.each( google_fonts, function( font, name ) { #>
 						<option value="{{ name }}"{{ selected_font === name ? selected_attr : '' }}>{{ name }}</option>
 						<# } ); #>
@@ -96,14 +96,14 @@ class A13_Customize_Font_Control extends WP_Customize_Control {
 
 			<# if(typeof google_fonts[selected_font] !== 'undefined'){ #>
 				<fieldset class="font-subsets checkboxes">
-					<legend><?php esc_html_e( 'Font Subsets', 'rife-free' ); ?></legend>
+					<legend><?php esc_html_e( 'Font Subsets', 'rife' ); ?></legend>
 				<# _.each( google_fonts[selected_font].subsets, function( subset ) { #>
 					<label><input type="checkbox" name="font-subset" value="{{ subset }}"{{ _.contains(selected_subsets, subset) ? checked_attr : '' }} />{{ subset }}</label>
 				<# } ); #>
 				</fieldset>
 
 				<fieldset class="font-variants checkboxes">
-					<legend><?php esc_html_e( 'Font Weights & Styles', 'rife-free' ); ?></legend>
+					<legend><?php esc_html_e( 'Font Weights & Styles', 'rife' ); ?></legend>
 				<# _.each( google_fonts[selected_font].variants, function( weights, variant ) { #>
 					<# _.each( weights, function( weight ) {
 						var val_variant = weight + (variant === 'normal'? '' : variant),
@@ -117,16 +117,16 @@ class A13_Customize_Font_Control extends WP_Customize_Control {
 
 			<fieldset class="font-spacing">
 				<div>
-					<label class="outside" for="{{ id_prefix }}word-spacing"><?php esc_html_e( 'Word Spacing', 'rife-free' ); ?></label>
+					<label class="outside" for="{{ id_prefix }}word-spacing"><?php esc_html_e( 'Word Spacing', 'rife' ); ?></label>
 					<input id="{{ id_prefix }}word-spacing" type="number" name="word-spacing" value="{{ selected_word_spacing }}" /><span class="input-unit">px</span>
 				</div>
 				<div>
-					<label class="outside" for="{{ id_prefix }}letter-spacing"><?php esc_html_e( 'Letter Spacing', 'rife-free' ); ?></label>
+					<label class="outside" for="{{ id_prefix }}letter-spacing"><?php esc_html_e( 'Letter Spacing', 'rife' ); ?></label>
 					<input id="{{ id_prefix }}letter-spacing" type="number" name="letter-spacing" value="{{ selected_letter_spacing }}" /><span class="input-unit">px</span>
 				</div>
 			</fieldset>
 
-			<div class="preview-font" style="font-family:{{ selected_font }};">Sample text with <strong>some bold words</strong>, <em>some italic ones</em> and numbers 1 2 3 4 5 6 7 8 9 :-)</div>
+			<div class="preview-font" style="font-family:{{ selected_font }};"><?php _e( 'Sample text with <strong>some bold words</strong>, <em>some italic ones</em> and numbers 1 2 3 4 5 6 7 8 9 :-)', 'rife' ); ?></div>
 		</div>
 		<?php
 	}

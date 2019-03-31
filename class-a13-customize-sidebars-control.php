@@ -46,12 +46,12 @@ class A13_Customize_Sidebars_Control extends WP_Customize_Control {
 				if(_.isNull(value) || _.isUndefined(value) || value.length === 0){ return; }
 			#>
 				<div class="custom_sidebar-row clearfix">
-					<label class="screen-reader-tex" for="{{ id_prefix }}sidebar-{{ index }}"><?php esc_html_e( 'Name of sidebar', 'rife-free' ); ?> {{ index }}</label>
+					<label class="screen-reader-tex" for="{{ id_prefix }}sidebar-{{ index }}"><?php esc_html_e( 'Name of sidebar', 'rife' ); ?> {{ index }}</label>
 					<input type="text" class="custom_sidebar" name="{{ index }}" id="{{ id_prefix }}sidebar-{{ index }}" value="{{ value }}" />
-					<button class="remove"><?php esc_html_e( 'Remove this sidebar', 'rife-free' ); ?></button>
+					<button class="remove"><?php esc_html_e( 'Remove this sidebar', 'rife' ); ?></button>
 				</div>
 			<# } ); #>
-			<button class="button button-primary add-new"><?php esc_html_e( 'Add sidebar', 'rife-free' ); ?></button>
+			<button class="button button-primary add-new"><?php esc_html_e( 'Add sidebar', 'rife' ); ?></button>
 
 		</div>
 		<?php
