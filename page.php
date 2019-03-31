@@ -33,7 +33,7 @@ else{
 		}
 		?>
 
-		<article id="content" class="clearfix">
+		<article id="content" class="clearfix"<?php apollo13framework_schema_args('creative'); ?>>
 			<div class="content-limiter">
 				<div id="col-mask">
 
@@ -46,13 +46,13 @@ else{
 					?>>
 						<div class="formatter">
 							<?php apollo13framework_title_bar( 'inside' ); ?>
-							<div class="real-content">
+							<div class="real-content"<?php apollo13framework_schema_args('text'); ?>>
 								<?php the_content(); ?>
 								<div class="clear"></div>
 
 								<?php
 								wp_link_pages( array(
-										'before' => '<div id="page-links">' . esc_html__( 'Pages: ', 'rife-free' ),
+										'before' => '<div id="page-links">' . esc_html__( 'Pages: ', 'rife' ),
 										'after'  => '</div>'
 									)
 								);

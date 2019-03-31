@@ -36,9 +36,9 @@ if($apollo13framework_a13->get_option( 'page_password_template_type' ) === 'cust
 else{
 	define('A13FRAMEWORK_PASSWORD_PROTECTED', true); //to get proper class in body
 
-	$_title = '<span class="fa fa-lock emblem"></span>' . esc_html__( 'This content is password protected.', 'rife-free' )
+	$_title = '<span class="fa fa-lock emblem"></span>' . esc_html__( 'This content is password protected.', 'rife' )
 	         .'<br />'
-	         .esc_html__( 'To view it please enter your password below:', 'rife-free' );
+	         .esc_html__( 'To view it please enter your password below', 'rife' );
 
 	get_header();
 

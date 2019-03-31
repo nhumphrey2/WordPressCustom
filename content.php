@@ -16,22 +16,18 @@ global $apollo13framework_a13, $post;
     <div class="real-content<?php echo 'post' === get_post_type()? ' hentry' : ''; ?>">
 
         <?php
-        $post_meta = apollo13framework_post_meta_under_content() . apollo13framework_post_meta_above_content();
-        if(strlen($post_meta)){
-            //$post_meta comes from escaped functions
-            echo '<div class="metas">'.$post_meta.'</div>';
-        }
+        apollo13framework_post_meta_data();
 
-        the_title('<h2 class="post-title entry-title"><a href="'. esc_url(get_permalink()) . '">', '</a></h2>');
+        the_title('<h2 class="post-title entry-title"'.apollo13framework_get_schema_args('headline').'><a href="'. esc_url(get_permalink()) . '"'.apollo13framework_get_schema_args('url').'>', '</a></h2>');
         ?>
 
-        <div class="entry-summary">
+        <div class="entry-summary"<?php apollo13framework_schema_args('text'); ?>>
         <?php
         $add_read_more = $apollo13framework_a13->get_option( 'blog_read_more', 'on' ) === 'on';
 
         if($apollo13framework_a13->get_option( 'blog_excerpt_type') == 'auto'){
             if(strpos($post->post_content, '<!--more-->')){
-                the_content( $add_read_more ? esc_html__( 'Read more', 'rife-free' ) : '' );
+                the_content( $add_read_more ? esc_html__( 'Read more', 'rife' ) : '' );
             }
             else{
                 the_excerpt();
@@ -39,7 +35,7 @@ global $apollo13framework_a13, $post;
         }
         //manual post cutting
         else{
-            the_content( $add_read_more ? esc_html__( 'Read more', 'rife-free' ) : '' );
+            the_content( $add_read_more ? esc_html__( 'Read more', 'rife' ) : '' );
         }
         ?>
         </div>

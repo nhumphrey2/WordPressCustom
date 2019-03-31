@@ -38,19 +38,19 @@ get_header();
                             <?php if ( ! empty( $post->post_parent ) ) : ?>
                             <span><a href="<?php
                                 /* translators: %s - title of parent post */
-                                echo esc_url(get_permalink( $post->post_parent )); ?>" title="<?php esc_attr( sprintf( esc_html__( 'Return to %s', 'rife-free' ), get_the_title( $post->post_parent ) ) ); ?>" rel="gallery"><?php
+                                echo esc_url(get_permalink( $post->post_parent )); ?>" title="<?php esc_attr( sprintf( esc_html__( 'Return to %s', 'rife' ), get_the_title( $post->post_parent ) ) ); ?>" rel="gallery"><?php
                                 /* translators: %s - title of parent post */
-                                printf(  esc_html__( 'Return to %s', 'rife-free' ), get_the_title( $post->post_parent ) );
+                                printf(  esc_html__( 'Return to %s', 'rife' ), get_the_title( $post->post_parent ) );
                                 ?></a></span>
                             <?php endif; ?>
 
                             <span><?php
                                 /* translators: %1$s - author name in form of link */
-                                printf(  esc_html__( 'By %1$s', 'rife-free' ),
+                                printf(  esc_html__( 'By %1$s', 'rife' ),
                                     sprintf( '<a class="author" href="%1$s" title="%2$s" rel="author">%3$s</a>',
                                         esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) )),
                                         /* translators: %s - author name */
-                                        sprintf( esc_attr__('View all posts by %s', 'rife-free' ), get_the_author() ),
+                                        sprintf( esc_attr__('View all posts by %s', 'rife' ), get_the_author() ),
                                         get_the_author()
                                     )
                                 );
@@ -58,7 +58,7 @@ get_header();
 
                             <span><?php
                                 /* translators: %1$s - date */
-                            printf( esc_html__( 'Published %1$s', 'rife-free' ),
+                            printf( esc_html__( 'Published %1$s', 'rife' ),
                                 sprintf( '<abbr class="published" title="%1$s">%2$s</abbr>',
                                     esc_attr( get_the_time() ),
                                     get_the_date()
@@ -71,10 +71,10 @@ get_header();
                                 if( isset($metadata['width']) && isset($metadata['height']) ){
                                     echo ' <span>';
                                     /* translators: %s - size in pixels  */
-                                    printf( esc_html__( 'Full size is %s pixels', 'rife-free' ),
+                                    printf( esc_html__( 'Full size is %s pixels', 'rife' ),
                                         sprintf( '<a href="%1$s" title="%2$s">%3$s &times; %4$s</a>',
                                             esc_url(wp_get_attachment_url()),
-                                            esc_attr__( 'Link to full-size image', 'rife-free' ),
+                                            esc_attr__( 'Link to full-size image', 'rife' ),
                                             esc_html($metadata['width']),
                                             esc_html($metadata['height'])
                                         )
@@ -83,7 +83,7 @@ get_header();
                                 }
                             }
                             ?>
-                            <?php edit_post_link( esc_html__( 'Edit', 'rife-free' ), '' ); ?>
+                            <?php edit_post_link( esc_html__( 'Edit', 'rife' ), '' ); ?>
                         </div>
 
 

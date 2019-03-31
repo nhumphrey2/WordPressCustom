@@ -12,7 +12,7 @@ global $apollo13framework_a13;
 the_post();
 
 if(post_password_required()){
-	echo '<p>'.esc_html_e( 'To view it please enter your password below', 'rife-free' ).'</p>';
+	echo '<p>'.esc_html_e( 'To view it please enter your password below', 'rife' ).'</p>';
 	echo apollo13framework_password_form();//escaped on creation
 }
 else{
@@ -41,7 +41,7 @@ else{
 	$ken_scale      = $apollo13framework_a13->get_meta( '_ken_scale' );
 
 	$slider_opts = array(
-		'autoplay '             => $apollo13framework_a13->get_meta( '_autoplay' ),
+		'autoplay'             => $apollo13framework_a13->get_meta( '_autoplay' ),
 		'transition'            => $apollo13framework_a13->get_meta( '_transition' ),
 		'fit_variant'           => $apollo13framework_a13->get_meta( '_fit_variant' ),
 		'pattern'               => $apollo13framework_a13->get_meta( '_pattern' ),

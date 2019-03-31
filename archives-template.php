@@ -31,7 +31,7 @@ get_header(); ?>
 
                         <?php
                         wp_link_pages( array(
-                                'before' => '<div id="page-links">'.esc_html__( 'Pages: ', 'rife-free' ),
+                                'before' => '<div id="page-links">'.esc_html__( 'Pages: ', 'rife' ),
                                 'after'  => '</div>')
                         );
                         ?>
@@ -39,7 +39,7 @@ get_header(); ?>
                         <div class="left50">
                             <h3><?php
                                 /* translators: %d - number of posts  */
-                                printf( esc_html__( 'Latest %d posts', 'rife-free' ), 50); ?></h3>
+                                printf( esc_html__( 'Latest %d posts', 'rife' ), 50); ?></h3>
                             <ul class="styled">
                             <?php
                                 wp_get_archives(array(
@@ -51,7 +51,7 @@ get_header(); ?>
                         </div>
 
                         <div class="right50">
-                            <h3><?php esc_html_e( 'By months', 'rife-free' ); ?></h3>
+                            <h3><?php esc_html_e( 'By months', 'rife' ); ?></h3>
                             <ul class="styled">
                             <?php
                                 wp_get_archives(array(
@@ -63,7 +63,7 @@ get_header(); ?>
 
                             <h3><?php
                                 /* translators: %d - number of categories  */
-                                printf(  esc_html__( 'Top %d categories', 'rife-free'  ), 10); ?></h3>
+                                printf(  esc_html__( 'Top %d categories', 'rife'  ), 10); ?></h3>
                             <ul class="styled">
                             <?php
                                 wp_list_categories(array(
@@ -78,7 +78,7 @@ get_header(); ?>
 
                             <h3><?php
                                 /* translators: %d - number of tags  */
-                                printf(  esc_html__( 'Top %d tags', 'rife-free' ), 10); ?></h3>
+                                printf(  esc_html__( 'Top %d tags', 'rife' ), 10); ?></h3>
                             <ul class="styled">
                             <?php
                                 $tags = get_tags(array(

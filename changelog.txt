@@ -6,6 +6,130 @@ Thanks!
 
 
 ----------------
+= 2.3.5(28.02.2019) =
+
+Added:
+-support for non-English chars anchors(thanks bahtiyar)
+-option "Hide content under the header" for Single Product and "Other shop pages"
+-(Rife Pro)option "Header color variant" for Single Product and "Other shop pages"
+-outside title bar option for Single Product
+
+Improved:
+-Grammar of 100% of the texts in the theme, so now they could be translated properly
+
+Fixed:
+-layering of links in some situation bricks albums(thanks Benjamin)
+
+Translation for Rife Pro status:
+-Polish - 100%
+-German - 100%
+-German (Formal) - 100%
+-French (France) - 100%
+-Portuguese (Brazil)- 100%
+-Dutch - 100%
+-Dutch (Formal) - 100%
+-Dutch (Belgium) - 100%
+-Chinese - 83%
+-Spanish (Spain) - 37%
+-Croatian - 32%
+-Russian - 30%
+-Ukrainian - 28%
+
+----------------
+= 2.3.4.1(Rife Free only)(16.02.2019) =
+
+Improved:
+-minor translation errors
+-screenshot of the theme
+
+----------------
+= 2.3.4(05.02.2019) =
+
+Fixed:
+-Fallback when file with theme settings can not be created
+
+----------------
+= 2.3.3(01.02.2019) =
+
+Translation for Rife Pro status:
+-French (France) - 74%
+-Portuguese (Brazil)- 74%
+-Polish - 74%
+-Dutch (Belgium) - 42%
+-Spanish (Spain) - 33%
+-Croatian - 30%
+-Russian - 26%
+-Ukrainian - 24%
+
+Added:
+-(Rife Pro)Top Bar -> Message part : Text align option
+
+Improved:
+-Support for WordPress 5.0.3 on some servers
+-better support for PolyLang(thanks farell!)
+-Grammar of 80% of the texts in the theme, so now they could be translated properly
+-Support for Elementor editing on Works list and Albums list pages
+-proper Alt attribute for logo image instead of site title
+-protection against WordPress < 4.7
+
+Fixed:
+-(Rife Pro)SVG scaling in logo in some situation
+-(Rife Pro)Translation not working in Customizer
+
+----------------
+= 2.3.1(08.01.2019) =
+
+Fixed:
+-Undefined events variable in JavaScript on Front End in some situations since 2.3.0
+
+----------------
+= 2.3.0(08.01.2019) =
+
+Added:
+-support for schema.org
+-(Rife Pro)option to change position of cookie message to bottom of the screen
+-better icon selector in theme options
+-(Rife Pro)Albums navigation positions in single album: At the top of an album, At the end of an album(Customizing -> Albums settings -> Single album -> Albums navigation)
+
+Improved:
+-(Rife Pro)language switcher in header Tools changing colors according to header variant settings
+-(Rife Pro)vertical header sizing
+-better HTML & Shortcodes support in footer text option(thanks MyMetta)
+-Albums, Works, People, WooCommerce settings are not displayed in Customizer if required plugins are not active
+-hover states on iOS devices on some elements like bricks albums
+-pingback link is conditional(added to page when enabled)
+-renamed some functions in utilities/woocommerce.php to use framework prefix
+-admin scripts from theme are only loaded on pages on which they are used
+-switched from esc_html sanitization to sanitize_text_field function
+-(Rife Free)base translation file
+
+Fixed:
+-(Rife Pro)Scroller "scroll page below" button showing when not needed while using vertical header
+-(Rife Pro)Shield logo on mobile reserving space in header
+-(Rife Pro)Scroller margin style when using as widget or shortcode
+-When adding new option to menu, theme options were visible only after saving
+-Warning in Rife Free while saving options
+-displaying of HTML 5 video
+-CSS minification breaking CSS animations
+-double scrolling to anchor mechanism when using theme with Elementor
+-(Rife Free)icons displayed in admin area
+
+For Developers:
+-Deprecated functions apollo13framework_post_meta_under_content() & apollo13framework_post_meta_above_content() as they were always used together.
+Instead of these two, use new one apollo13framework_get_post_meta_data()
+-renamed admin-script handle to apollo13framework-admin
+-renamed admin-css handle to apollo13framework-admin-css
+-renamed apollo-jquery-ui handle to apollo13framework-jquery-ui
+-renamed a13-font-awesome handle to apollo13framework-font-awesome
+
+Moved to Apollo13 Framework Extensions(due to WordPress.org requirements):
+-meta options for background image
+-meta options for video as featured media
+-menu enhancement options
+-option to change slug for album & work post types
+
+
+----------------
 = 2.2.0(28.11.2018) =
 
 Added:

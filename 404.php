@@ -30,12 +30,12 @@ else{
 
 	// Elementor `404` location
 	if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) {
-		$_title = '<span class="emblem">404</span>'.esc_html__('The page you are looking for can\'t be found!', 'rife-free');
+		$_title = '<span class="emblem">404</span>'.esc_html__('The page you are looking for can\'t be found!', 'rife');
 		$subtitle = sprintf(
 			/* translators:  Go to our home page(link) or go back to previous page(link) */
-			esc_html__( 'Go to our %1$s or go back to %2$s', 'rife-free' ),
-			'<a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'home page', 'rife-free' ) . '</a>',
-			'<a href="javascript:history.go(-1)">' . esc_html__( 'previous page', 'rife-free' ) . '</a>'
+			esc_html__( 'Go to our %1$s or go back to %2$s', 'rife' ),
+			'<a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'home page', 'rife' ) . '</a>',
+			'<a href="javascript:history.go(-1)">' . esc_html__( 'previous page', 'rife' ) . '</a>'
 		);
 
 		apollo13framework_title_bar( 'outside', $_title, $subtitle );

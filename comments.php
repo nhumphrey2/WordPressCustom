@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 			/* translators: %d - number of comments */
-			printf( esc_html__( '%d comment(s)', 'rife-free' ), esc_html( get_comments_number() ) );
+			printf( esc_html__( '%d comment(s)', 'rife' ), esc_html( get_comments_number() ) );
 			?>
 		</h2>
 
@@ -47,7 +47,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'rife-free' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'rife' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

@@ -39,28 +39,28 @@ else{
 		$count      = $all_search->post_count;
 
 		/* translators: %1$d number of results, %2$s search query   */
-		$_title = sprintf( esc_html__( '%1$d Search results for "%2$s"', 'rife-free' ), $count, get_search_query() );
+		$_title = sprintf( esc_html__( '%1$d Search results for "%2$s"', 'rife' ), $count, get_search_query() );
 	} elseif ( is_archive() ) {
 		if ( is_author() ) {
 			/* translators: %s - author name */
-			$_title = sprintf( esc_html__( 'Author Archives: %s', 'rife-free' ), "<span class='vcard'>" . get_the_author() . "</span>" );
+			$_title = sprintf( esc_html__( 'Author Archives: %s', 'rife' ), "<span class='vcard'>" . get_the_author() . "</span>" );
 		} elseif ( is_category() ) {
 			/* translators: %s - category name */
-			$_title = sprintf( esc_html__( 'Category Archives: %s', 'rife-free' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+			$_title = sprintf( esc_html__( 'Category Archives: %s', 'rife' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 		} elseif ( is_tag() ) {
 			/* translators: %s - tag name */
-			$_title = sprintf( esc_html__( 'Tag Archives: %s', 'rife-free' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+			$_title = sprintf( esc_html__( 'Tag Archives: %s', 'rife' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 		} elseif ( is_day() ) {
 			/* translators: %s - day */
-			$_title = sprintf( esc_html__( 'Daily Archives: %s', 'rife-free' ), '<span>' . get_the_date() . '</span>' );
+			$_title = sprintf( esc_html__( 'Daily Archives: %s', 'rife' ), '<span>' . get_the_date() . '</span>' );
 		} elseif ( is_month() ) {
 			/* translators: %s - month */
-			$_title = sprintf( esc_html__( 'Monthly Archives: %s', 'rife-free' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+			$_title = sprintf( esc_html__( 'Monthly Archives: %s', 'rife' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 		} elseif ( is_year() ) {
 			/* translators: %s - year */
-			$_title = sprintf( esc_html__( 'Yearly Archives: %s', 'rife-free' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+			$_title = sprintf( esc_html__( 'Yearly Archives: %s', 'rife' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 		} else {
-			$_title = esc_html__( 'Blog Archives', 'rife-free' );
+			$_title = esc_html__( 'Blog Archives', 'rife' );
 		}
 	}
 

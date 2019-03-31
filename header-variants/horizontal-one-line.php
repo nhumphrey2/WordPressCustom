@@ -10,7 +10,7 @@ if($header_content_width === 'narrow' && $apollo13framework_a13->get_option( 'he
 	$header_width .= ' narrow-header';
 }
 
-$header_classes = 'to-move horizontal header-type-one_line a13-'.apollo13framework_horizontal_header_color_variant().'-variant header-variant-' . $variant . $header_width;
+$header_classes = 'to-move a13-horizontal header-type-one_line a13-'.apollo13framework_horizontal_header_color_variant().'-variant header-variant-' . $variant . $header_width;
 if($variant === 'one_line_centered'){
 	$header_classes .=  ($apollo13framework_a13->get_option( 'logo_with_shield' ) === 'on') ? ' with-shield' : ' no-shield';
 }
@@ -35,7 +35,7 @@ if(strlen($show_header_at) && $show_header_at > 0){
 }
 
 ?>
-<header id="header" class="<?php echo esc_attr( $header_classes ); ?>">
+<header id="header" class="<?php echo esc_attr( $header_classes ); ?>"<?php apollo13framework_schema_args( 'header' ); ?>>
 	<?php if ( $top_bar ) {
 		apollo13framework_header_top_bar();
 	} ?>
@@ -61,7 +61,7 @@ if(strlen($show_header_at) && $show_header_at > 0){
 
 		<div class="menu-cell">
 			<?php if( $apollo13framework_a13->get_option( 'logo_with_shield' ) === 'on'){
-					?><div class="logo-container shield"><div class="scaling-svg-container"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+					?><div class="logo-container shield"<?php apollo13framework_schema_args('logo'); ?>><div class="scaling-svg-container"><svg version="1.1" xmlns="https://www.w3.org/2000/svg"
 			                                                  viewBox="0 0 1000.000000 1256.000000">
 					<g transform="translate(0.000000,1256.000000) scale(0.100000,-0.100000)"
 					   fill="#000000" stroke="none">
@@ -72,10 +72,13 @@ if(strlen($show_header_at) && $show_header_at > 0){
 l0 4502 -5000 0 -5000 0 0 -4498z"></path>
 					</g>
 				</svg></div>
-				<?php }
-				else{ echo '<div class="logo-container">'; }
+				<?php
+				}
+				else{
+					echo '<div class="logo-container"'.apollo13framework_get_schema_args('logo').'>';
+				}
 				apollo13framework_header_logo(); ?></div>
-			<nav id="access" class="navigation-bar"><!-- this element is need in HTML even if menu is disabled -->
+			<nav id="access" class="navigation-bar"<?php apollo13framework_schema_args('navigation'); ?>><!-- this element is need in HTML even if menu is disabled -->
 				<?php if ( $menu_on ): ?>
 				<div class="menu-container clearfix">
 					<?php apollo13framework_header_menu('one-line-left'); ?>
@@ -92,8 +95,8 @@ l0 4502 -5000 0 -5000 0 0 -4498z"></path>
 
 		<?php else: ?>
 
-		<div class="logo-container"><?php apollo13framework_header_logo(); ?></div>
-		<nav id="access" class="navigation-bar"><!-- this element is need in HTML even if menu is disabled -->
+		<div class="logo-container"<?php apollo13framework_schema_args('logo'); ?>><?php apollo13framework_header_logo(); ?></div>
+		<nav id="access" class="navigation-bar"<?php apollo13framework_schema_args('navigation'); ?>><!-- this element is need in HTML even if menu is disabled -->
 			<?php if ( $menu_on ): ?>
 				<?php apollo13framework_header_menu(); ?>
 			<?php endif; ?>

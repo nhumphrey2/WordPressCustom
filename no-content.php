@@ -12,12 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <p><span class="info-404"><?php
         /* translators: "Go back" link */
-        printf( esc_html__('%s or use Site Map below:', 'rife-free' ), '<a href="javascript:history.go(-1)">'.esc_html__('Go back', 'rife-free').'</a>' ); ?></span></p>
+        printf( esc_html__('%s or use Site Map below:', 'rife' ), '<a href="javascript:history.go(-1)">'.esc_html__('Go back', 'rife').'</a>' ); ?></span></p>
 
 <div class="left50">
     <?php
     if ( has_nav_menu( 'header-menu' ) ){
-        echo '<h3>'.esc_html__( 'Main navigation', 'rife-free' ).'</h3>';
+        echo '<h3>'.esc_html__( 'Main navigation', 'rife' ).'</h3>';
         wp_nav_menu( array(
                 'container'       => false,
                 'link_before'     => '',
@@ -28,14 +28,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     }
     ?>
 
-    <h3><?php esc_html_e( 'Categories', 'rife-free' ); ?></h3>
+    <h3><?php esc_html_e( 'Categories', 'rife' ); ?></h3>
     <ul class="styled">
         <?php wp_list_categories('title_li='); ?>
     </ul>
 </div>
 
 <div class="right50">
-    <h3><?php esc_html_e( 'Pages', 'rife-free' ); ?></h3>
+    <h3><?php esc_html_e( 'Pages', 'rife' ); ?></h3>
     <ul class="styled">
         <?php wp_list_pages('title_li='); ?>
     </ul>
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         $all_albums = new WP_Query( $args );
 
         if ($all_albums->have_posts()) :
-            echo '<h3>'.esc_html__( 'Albums', 'rife-free' ).'</h3>';
+            echo '<h3>'.esc_html__( 'Albums', 'rife' ).'</h3>';
             echo '<ul class="styled">';
 
             while ( $all_albums->have_posts() ) :
